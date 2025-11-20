@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white-smoke text-black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl bg-white-smoke shadow-md p-6 border border-stone-brown/20;
+  }
+  
+  .input {
+    @apply rounded-lg border border-stone-brown/30 bg-white-smoke px-4 py-2 text-black placeholder:text-dusty-taupe focus:outline-none focus:ring-2 focus:ring-night-bordeaux focus:border-night-bordeaux transition-all;
+  }
+  
+  .button-primary {
+    @apply rounded-lg bg-night-bordeaux text-white-smoke px-6 py-3 font-medium hover:bg-black transition-colors duration-200 shadow-sm;
+  }
+  
+  .button-secondary {
+    @apply rounded-lg bg-dusty-taupe text-black px-4 py-2 font-medium hover:bg-stone-brown hover:text-white-smoke transition-colors duration-200;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
